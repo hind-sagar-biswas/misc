@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p{line-height: 30px;}
 
 i{color: #ff558b;}
 
-h2, h6{color: white;}
+#header h2, #header h6{color: white;}
 
 main{
   width: calc(100vw - 20px);
@@ -36,6 +36,18 @@ pre{
 ul li {
   list-style-type: none;
   margin: 4px 10px;
+}
+
+.output ul li{
+  list-style-type: disc;
+  margin-left: 40px;
+}
+.output ol li{
+  margin-left: 40px;
+}
+.output a{
+  text-decoration: underline;
+  color: blue;
 }
 
 li code{
@@ -77,4 +89,16 @@ li code{
   border-radius: 50%;
   border: 2px solid white;
   margin: 2px 20px 3px 0;
+}
+
+.output{
+  width: calc(100% - 20px);
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Verdana";
+  background: #eaeaea;
+}
+
+.content ul a{
+  color: #8099c1;
 }
