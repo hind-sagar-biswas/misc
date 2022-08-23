@@ -1,1 +1,308 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    -->
+    
+    <title>HSC HTML cheat sheet</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="sub-cont">
+      <div id="header">
+        <a href="https://facebook.com/hindsagar.biswas"><img width="60px" src="https://avatars.githubusercontent.com/u/69765092?v=4" alt="Hind"></a>
+        <div id="header-info">
+          <h2 class="title"> HTML Cheat Sheet for HSC</h2>
+          <h6> by <a href="https://facebook.com/hindsagar.biswas"><em>Hind Biswas</em></a></h6>
+        </div>
+      </div>
+      <div class="element">
+        <h3 class="element-name">Base Structure </h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>!DOCTYPE, html, head, meta, title, body</i></p>
+          <p><b><small>Structure</small></b></p>
+          <pre><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>Page title&lt;/title>
+&lt;/head>
+&lt;body>
+  
+&lt;/body>
+&lt;/html></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Paragraph</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>p</i></p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;p>This is a paragraph&lt;/p></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Heading</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>h1, h2, h3, h4, h5, h6</i></p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;h1> This is Heading 1 &lt;/h1>
+&lt;h2> This is Heading 2 &lt;/h2>
+&lt;h3> This is Heading 3 &lt;/h3>
+&lt;h4> This is Heading 4 &lt;/h4>
+&lt;h5> This is Heading 5 &lt;/h5>
+&lt;h6> This is Heading 6 &lt;/h6></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Break</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>br</i></p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;p>Before break&lt;br>This is after break&lt;/p></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Horizontal Break</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>hr</i></p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;p>Before horizontal break&lt;hr>After horizontal break&lt;/p></code></pre>  
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Text Formatting</h3>
+        <div class="info">
+          <p><b>Tag: </b>
+           <ul>
+             <li>Bold :<i> strong, b</i></li>
+             <li>Itallic :<i> em, i</i></li>
+             <li>Underlined :<i> u</i></li>
+             <li>Subscript :<i> sub</i></li>
+             <li>Superscript :<i> sup</i></li>
+           </ul>
+          </p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;p> This is &lt;b>Bold text&lt/b>&lt;/p>
+&lt;p> This is &lt;strong>Bold text&lt/strong>&lt;/p>
+&lt;p> This is &lt;i>Itallic text&lt/i>&lt;/p>
+&lt;p> This is &lt;em>Itallic text&lt/em>&lt;/p>
+&lt;p> This is &lt;u>Underlined text&lt/u>&lt;/p>
+&lt;p> This is &lt;sub>Subscript&lt/sub>&lt;/p>
+&lt;p> This is &lt;sup>Superscript&lt/sup>&lt;/p></code></pre>  
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">List</h3>
+        <div class="info">
+          <p><b>Tag: </b>
+           <ul>
+             <li>Ordered list :<i> ol</i></li>
+             <li>Unordered list :<i> ul</i></li>
+             <li>List iten :<i> li</i></li>
+           </ul>
+          </p>
+          <p><b>Attributes: </b>
+           <ul>
+             <li><u>Ordered list :</u>
+               <ul>
+                 <li><code>type=""</code> : 1, i, I, a, A</li>
+                 <li><code>start=""</code> : starting number for the list</li>
+               </ul>
+             </li>
+             <li><u>Unordered list :</u>
+               <ul>
+                 <li><code>type=""</code> : square, circle, disc</li>
+               </ul>
+             </li>
+           </ul>
+          </p>
+          <p><b><small>Example [ordered list]</small></b></p>
+          <pre><code>&lt;ol>This is an Ordered list
+  &lt;li>Item 1&lt;/li>
+  &lt;li>Item 1&lt;/li>
+  &lt;li>Item 1&lt;/li>
+&lt;/ol></code></pre>
+        <p><b><small>Example [unordered list]</small></b></p>
+          <pre><code>&lt;ul>This is an Ordered list
+  &lt;li>Item 1&lt;/li>
+  &lt;li>Item 1&lt;/li>
+  &lt;li>Item 1&lt;/li>
+&lt;/ul></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Anchor</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>a</i></p>
+          <p><b>Attributes: </b>
+             <ul>
+               <li><code>href=""</code> : hyperlink / URL</li>
+               <li><code>target=""</code> : _blank</li>
+             </ul>
+          </p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;a href="https://google.com/">Click Here&lt;/a></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Meta</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>meta</i></p>
+          <p><b>Attributes: </b>
+             <ul>
+               <li><code>charset=""</code> : utf-8</li>
+             </ul>
+          </p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;meta charset="UTF-8"></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Image</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>img</i></p>
+          <p><b>Attributes: </b>
+             <ul>
+               <li><code>src=""</code> : Image link</li>
+               <li><code>alt=""</code> : Alternate Name</li>
+               <li><code>title=""</code> : Title for tooltip</li>
+               <li><code>width=""</code> : Width in px</li>
+               <li><code>height=""</code> : Height in px</li>
+             </ul>
+          </p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;img src="images/logo.png" width="200px" alt="Site Logo"></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Div</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>div</i></p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;div>
+  &lt;p>This is a paragraph inside a div&lt;/p>
+&lt;/div></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Span</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>span</i></p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;p>This is a &lt;span>Span&lt;/span> inside a p tag&lt;/p></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">List</h3>
+        <div class="info">
+          <p><b>Tag: </b>
+           <ul>
+             <li>Table :<i> table</i></li>
+             <li>Table head :<i> thead</i></li>
+             <li>Table body :<i> tbody</i></li>
+             <li>Table footer :<i> tfooter</i></li>
+             <li>Table row :<i> tr</i></li>
+             <li>Table data :<i> td, th</i></li>
+           </ul>
+          </p>
+          <p><b>Attributes: </b>
+           <ul>
+             <li><u>Table :</u>
+               <ul>
+                 <li><code>border=""</code> : 0(default) = none; 1,2,3.... = bordered</li>
+                 <li><code>cellspacing=""</code> : spacing between cells (0,1,2,3....)</li>
+                 <li><code>cellpadding=""</code> : padding inside cells (0,1,2,3....)</li>
+               </ul>
+             </li>
+             <li><u>Table Data :</u>
+               <ul>
+                 <li><code>rowspan=""</code> : number of rows (1,2,3....)</li>
+                 <li><code>colspan=""</code> : number of columns (1,2,3....)</li>
+               </ul>
+             </li>
+           </ul>
+          </p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;table>
+  &lt;tr>
+    &lt;th>Id.&lt;/th>
+    &lt;th>Name&lt;/th>
+    &lt;th>Country&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>01&lt;/td>
+    &lt;td>John Doe&lt;/td>
+    &lt;td>USA&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>02&lt;/td>
+    &lt;td>Dany Krossing&lt;/td>
+    &lt;td>Poland&lt;/td>
+  &lt;/tr>
+&lt;/table></code></pre>
+        </div>
+      </div>
+      
+      <div class="element">
+        <h3 class="element-name">Style</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>style</i></p>
+          <p><b>Properties: </b>
+             <ul>
+               <li><code>width</code> <code>height</code></li>     
+               <li><code>font-family</code> <code>font-weight</code><code>font-size</code></li>  
+               <li><code>margin</code> <code>padding</code></li>     
+               <li><code>border</code> <code>border-radius</code></li>     
+               <li><code>float</code> <code>text-align</code></li>
+               <li><code>color</code> <code>background</code></li>  
+          </p>
+          <p><b><small>Structure</small></b></p>
+          <pre><code>selector{
+  property: value;
+}</code></pre>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;style>
+  div{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background: pink;
+ }
+&lt;/style></code></pre>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+</body>
+</html>
