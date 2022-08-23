@@ -7,7 +7,6 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    
     <title>HSC HTML cheat sheet</title>
     <link rel="stylesheet" href="style.css">
     
@@ -26,7 +25,31 @@
           <h6> by <a href="https://facebook.com/hindsagar.biswas"><em>Hind Biswas</em></a></h6>
         </div>
       </div>
+      
       <div class="element">
+        <h3 class="element-name">Table of Contents</h3>
+        <div class="info content">
+          <ul>
+            <a href="#struct"><li>Base Structure </li></a>
+            <a href="#p"><li>Paragraph </li></a>
+            <a href="#h"><li>Heading</li></a>
+            <a href="#br"><li>Break</li></a>
+            <a href="#hr"><li>Horizontal Break</li></a>
+            <a href="#text"><li>Text Formatting</li></a>
+            <a href="#li"><li>List</li></a>
+            <a href="#a"><li>Anchor</li></a>
+            <a href="#meta"><li>Meta</li></a>
+            <a href="#img"><li>Image</li></a>
+            <a href="#div"><li>Div</li></a>
+            <a href="#span"><li>Span</li></a>
+            <a href="#table"><li>Table</li></a>
+            <a href="#style"><li>Style</li></a>
+            <a href="#comment"><li>Comment</li></a>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="element" id="struct">
         <h3 class="element-name">Base Structure </h3>
         <div class="info">
           <p><b>Tag: </b> <i>!DOCTYPE, html, head, meta, title, body</i></p>
@@ -44,16 +67,20 @@
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="p">
         <h3 class="element-name">Paragraph</h3>
         <div class="info">
           <p><b>Tag: </b> <i>p</i></p>
           <p><b><small>Example</small></b></p>
           <pre><code>&lt;p>This is a paragraph&lt;/p></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <p>This is a paragraph</p>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="h">
         <h3 class="element-name">Heading</h3>
         <div class="info">
           <p><b>Tag: </b> <i>h1, h2, h3, h4, h5, h6</i></p>
@@ -64,28 +91,45 @@
 &lt;h4> This is Heading 4 &lt;/h4>
 &lt;h5> This is Heading 5 &lt;/h5>
 &lt;h6> This is Heading 6 &lt;/h6></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <h1> This is Heading 1 </h1>
+            <h2> This is Heading 2 </h2>
+            <h3> This is Heading 3 </h3>
+            <h4> This is Heading 4 </h4>
+            <h5> This is Heading 5 </h5>
+            <h6> This is Heading 6 </h6>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="br">
         <h3 class="element-name">Break</h3>
         <div class="info">
           <p><b>Tag: </b> <i>br</i></p>
           <p><b><small>Example</small></b></p>
           <pre><code>&lt;p>Before break&lt;br>This is after break&lt;/p></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <p>Before break<br>This is after break</p>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="hr">
         <h3 class="element-name">Horizontal Break</h3>
         <div class="info">
           <p><b>Tag: </b> <i>hr</i></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;p>Before horizontal break&lt;hr>After horizontal break&lt;/p></code></pre>  
+          <pre><code>&lt;p>Before horizontal break&lt;hr>After horizontal break&lt;/p></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <p>Before horizontal break<hr>After horizontal break</p>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="text">
         <h3 class="element-name">Text Formatting</h3>
         <div class="info">
           <p><b>Tag: </b>
@@ -104,11 +148,21 @@
 &lt;p> This is &lt;em>Itallic text&lt/em>&lt;/p>
 &lt;p> This is &lt;u>Underlined text&lt/u>&lt;/p>
 &lt;p> This is &lt;sub>Subscript&lt/sub>&lt;/p>
-&lt;p> This is &lt;sup>Superscript&lt/sup>&lt;/p></code></pre>  
+&lt;p> This is &lt;sup>Superscript&lt/sup>&lt;/p></code></pre> 
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+<p> This is <b>Bold text</b></p>
+<p> This is <strong>Bold text</strong></p>
+<p> This is <em>Itallic text</em></p>
+<p> This is <em>Itallic text</em></p>
+<p> This is <u>Underlined text</u></p>
+<p> This is <sub>Subscript</sub></p>
+<p> This is <sup>Superscript</sup></p>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="li">
         <h3 class="element-name">List</h3>
         <div class="info">
           <p><b>Tag: </b>
@@ -139,16 +193,32 @@
   &lt;li>Item 2&lt;/li>
   &lt;li>Item 3&lt;/li>
 &lt;/ol></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <ol>This is an Ordered list
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+          </div>
         <p><b><small>Example [unordered list]</small></b></p>
-          <pre><code>&lt;ul>This is an Ordered list
+          <pre><code>&lt;ul>This is an Unordered list
   &lt;li>Item 1&lt;/li>
   &lt;li>Item 2&lt;/li>
   &lt;li>Item 3&lt;/li>
 &lt;/ul></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <ul>This is an Unordered list
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="a">
         <h3 class="element-name">Anchor</h3>
         <div class="info">
           <p><b>Tag: </b> <i>a</i></p>
@@ -160,13 +230,18 @@
           </p>
           <p><b><small>Example</small></b></p>
           <pre><code>&lt;a href="https://google.com/">Click Here&lt;/a></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <a href="https://google.com/">Click Here</a>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="meta">
         <h3 class="element-name">Meta</h3>
         <div class="info">
           <p><b>Tag: </b> <i>meta</i></p>
+          <p><b>Note: </b> <em>Meta tag doesn’t show up on website, it only contains informations related to thr website inside head tag!</em></p>
           <p><b>Attributes: </b>
              <ul>
                <li><code>charset=""</code> : utf-8</li>
@@ -177,7 +252,7 @@
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="img">
         <h3 class="element-name">Image</h3>
         <div class="info">
           <p><b>Tag: </b> <i>img</i></p>
@@ -191,31 +266,47 @@
              </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;img src="images/logo.png" width="200px" alt="Site Logo"></code></pre>
+          <pre><code>&lt;img src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" width="200px" alt="Site Logo"></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <img width="200px" src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" alt="Lemmings">
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="div">
         <h3 class="element-name">Div</h3>
         <div class="info">
           <p><b>Tag: </b> <i>div</i></p>
+          <p><b>Note: </b> <em>Divs are just containers that contains a block of codes!</em></p>
           <p><b><small>Example</small></b></p>
           <pre><code>&lt;div>
   &lt;p>This is a paragraph inside a div&lt;/p>
 &lt;/div></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <div>
+              <p>This is a paragraph inside a div</p>
+            </div>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="span">
         <h3 class="element-name">Span</h3>
         <div class="info">
           <p><b>Tag: </b> <i>span</i></p>
+          <p><b>Note: </b> <em>Spans are containers like div but they are inline element while divs are block level element!</em></p>
           <p><b><small>Example</small></b></p>
           <pre><code>&lt;p>This is a &lt;span>Span&lt;/span> inside a p tag&lt;/p></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <p>This is a <span>Span</span> inside a p tag</p>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="table">
         <h3 class="element-name">Table</h3>
         <div class="info">
           <p><b>Tag: </b>
@@ -246,7 +337,7 @@
            </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;table>
+          <pre><code>&lt;table border="1">
   &lt;tr>
     &lt;th>Id.&lt;/th>
     &lt;th>Name&lt;/th>
@@ -263,10 +354,30 @@
     &lt;td>Poland&lt;/td>
   &lt;/tr>
 &lt;/table></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+ <table border="1" style="background: white;">
+  <tr>
+    <th>Id.</th>
+    <th>Name</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>John Doe</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>Dany Krossing</td>
+    <td>Poland</td>
+  </tr>
+</table>
+          </div>
         </div>
       </div>
       
-      <div class="element">
+      <div class="element" id="style">
         <h3 class="element-name">Style</h3>
         <div class="info">
           <p><b>Tag: </b> <i>style</i></p>
@@ -295,10 +406,40 @@
     border: 2px solid red;
     border-radius: 5px;
     text-align: center;
-    color: white;
+    color: red;
     background: pink;
  }
-&lt;/style></code></pre>
+&lt;/style>
+&lt;div>This is a div&lt;/div></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+            <style>
+#output-div-1{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+    color: red;
+    background: pink;
+}
+            </style>
+            <div id="output-div-1">This is a div</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="element" id="comment">
+        <h3 class="element-name">Comment</h3>
+        <div class="info">
+          <p><b>Tag: </b> <i>&lt;!-- --&gt;</i></p>
+          <p><b>Note: </b> <em>Comments doesn’t show up on website!</em></p>
+          <p><b><small>Example</small></b></p>
+          <pre><code>&lt;!-- This is a comment --&gt;</code></pre>
         </div>
       </div>
       
