@@ -332,12 +332,14 @@
                <ul>
                  <li><code>rowspan=""</code> : number of rows (1,2,3....)</li>
                  <li><code>colspan=""</code> : number of columns (1,2,3....)</li>
+                 <li><code>align=""</code> : horizontal alignment (left, center, right)</li>
+                 <li><code>valign=""</code> : vertical alignment (top, middle, center)</li>
                </ul>
              </li>
            </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;table border="1">
+          <pre><code>&lt;table>
   &lt;tr>
     &lt;th>Id.&lt;/th>
     &lt;th>Name&lt;/th>
@@ -356,7 +358,82 @@
 &lt;/table></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
+ <table>
+  <tr>
+    <th>Id.</th>
+    <th>Name</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>John Doe</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>Dany Krossing</td>
+    <td>Poland</td>
+  </tr>
+</table>
+          </div>
+          <br>
+          <p><b><small>Example for <kbd>border=""</kbd></small></b></p>
+          <pre><code>&lt;table border="1">
+......
+&lt;/tabe></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
  <table border="1" style="background: white;">
+  <tr>
+    <th>Id.</th>
+    <th>Name</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>John Doe</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>Dany Krossing</td>
+    <td>Poland</td>
+  </tr>
+</table>
+          </div>
+          <br>
+          <p><b><small>Example for <kbd>cellspacing=""</kbd></small></b></p>
+          <pre><code>&lt;table border="1" cellspacing="0">
+......
+&lt;/tabe></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output">
+ <table border="1" cellspacing="0" style="background: white;">
+  <tr>
+    <th>Id.</th>
+    <th>Name</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>John Doe</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>Dany Krossing</td>
+    <td>Poland</td>
+  </tr>
+</table>
+          </div>
+          <br>
+          <p><b><small>Example for <kbd>cellpadding=""</kbd></small></b></p>
+          <pre><code>&lt;table border="1" cellpadding="15">
+......
+&lt;/tabe></code></pre>
+          <p><b><small>Output</small></b></p>
+          <div class="output cp">
+ <table border="1" cellpadding="15" style="background: white;">
   <tr>
     <th>Id.</th>
     <th>Name</th>
