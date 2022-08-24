@@ -49,8 +49,15 @@ ul li {
   text-decoration: underline;
   color: blue;
 }
+.output th, .output td{
+  padding: 2px;
+}
 
-li code{
+.cp th, .cp td{
+  padding: 15px;
+}
+
+li code, kbd{
   background: #eee;
   color: darkblue;
   border-radius: 2px;
