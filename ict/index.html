@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="prism.css">
 </head>
 <body>
   <main>
@@ -54,14 +55,14 @@
         <div class="info">
           <p><b>Tag: </b> <i>!DOCTYPE, html, head, meta, title, body</i></p>
           <p><b><small>Structure</small></b></p>
-          <pre><code>&lt;!DOCTYPE html>
+          <pre class="line-numbers"><code class="language-html">&lt;!DOCTYPE html>
 &lt;html>
 &lt;head>
   &lt;meta charset="UTF-8">
   &lt;title>Page title&lt;/title>
 &lt;/head>
 &lt;body>
-  
+ ...... 
 &lt;/body>
 &lt;/html></code></pre>
         </div>
@@ -72,7 +73,7 @@
         <div class="info">
           <p><b>Tag: </b> <i>p</i></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;p>This is a paragraph&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;p>This is a paragraph&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>This is a paragraph</p>
@@ -85,7 +86,7 @@
         <div class="info">
           <p><b>Tag: </b> <i>h1, h2, h3, h4, h5, h6</i></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;h1> This is Heading 1 &lt;/h1>
+          <pre class="line-numbers"><code class="language-html">&lt;h1> This is Heading 1 &lt;/h1>
 &lt;h2> This is Heading 2 &lt;/h2>
 &lt;h3> This is Heading 3 &lt;/h3>
 &lt;h4> This is Heading 4 &lt;/h4>
@@ -108,7 +109,7 @@
         <div class="info">
           <p><b>Tag: </b> <i>br</i></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;p>Before break&lt;br>This is after break&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;p>Before break&lt;br>This is after break&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>Before break<br>This is after break</p>
@@ -121,7 +122,7 @@
         <div class="info">
           <p><b>Tag: </b> <i>hr</i></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;p>Before horizontal break&lt;hr>After horizontal break&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;p>Before horizontal break&lt;hr>After horizontal break&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>Before horizontal break<hr>After horizontal break</p>
@@ -137,16 +138,18 @@
              <li>Bold :<i> strong, b</i></li>
              <li>Itallic :<i> em, i</i></li>
              <li>Underlined :<i> u</i></li>
+             <li>Line through :<i> del</i></li>
              <li>Subscript :<i> sub</i></li>
              <li>Superscript :<i> sup</i></li>
            </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;p> This is &lt;b>Bold text&lt/b>&lt;/p>
+          <pre class="line-numbers"><code class="language-html">&lt;p> This is &lt;b>Bold text&lt/b>&lt;/p>
 &lt;p> This is &lt;strong>Bold text&lt/strong>&lt;/p>
 &lt;p> This is &lt;i>Itallic text&lt/i>&lt;/p>
 &lt;p> This is &lt;em>Itallic text&lt/em>&lt;/p>
 &lt;p> This is &lt;u>Underlined text&lt/u>&lt;/p>
+&lt;p> This is &lt;del>Line through text&lt/del>&lt;/p>
 &lt;p> This is &lt;sub>Subscript&lt/sub>&lt;/p>
 &lt;p> This is &lt;sup>Superscript&lt/sup>&lt;/p></code></pre> 
           <p><b><small>Output</small></b></p>
@@ -156,6 +159,7 @@
 <p> This is <em>Itallic text</em></p>
 <p> This is <em>Itallic text</em></p>
 <p> This is <u>Underlined text</u></p>
+<p> This is <del>Line through text</del></p>
 <p> This is <sub>Subscript</sub></p>
 <p> This is <sup>Superscript</sup></p>
           </div>
@@ -188,7 +192,7 @@
            </ul>
           </p>
           <p><b><small>Example [ordered list]</small></b></p>
-          <pre><code>&lt;ol>This is an Ordered list
+          <pre class="line-numbers"><code class="language-html">&lt;ol>This is an Ordered list
   &lt;li>Item 1&lt;/li>
   &lt;li>Item 2&lt;/li>
   &lt;li>Item 3&lt;/li>
@@ -202,7 +206,7 @@
             </ol>
           </div>
         <p><b><small>Example [unordered list]</small></b></p>
-          <pre><code>&lt;ul>This is an Unordered list
+          <pre class="line-numbers"><code class="language-html">&lt;ul>This is an Unordered list
   &lt;li>Item 1&lt;/li>
   &lt;li>Item 2&lt;/li>
   &lt;li>Item 3&lt;/li>
@@ -229,7 +233,7 @@
              </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;a href="https://google.com/">Click Here&lt;/a></code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;a href="https://google.com/">Click Here&lt;/a></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <a href="https://google.com/">Click Here</a>
@@ -248,7 +252,7 @@
              </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;meta charset="UTF-8"></code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;meta charset="UTF-8"></code></pre>
         </div>
       </div>
       
@@ -266,7 +270,7 @@
              </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;img src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" width="200px" alt="Site Logo"></code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;img src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" width="200px" alt="Site Logo"></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <img width="200px" src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" alt="Lemmings">
@@ -280,7 +284,7 @@
           <p><b>Tag: </b> <i>div</i></p>
           <p><b>Note: </b> <em>Divs are just containers that contains a block of codes!</em></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;div>
+          <pre class="line-numbers"><code class="language-html">&lt;div>
   &lt;p>This is a paragraph inside a div&lt;/p>
 &lt;/div></code></pre>
           <p><b><small>Output</small></b></p>
@@ -298,7 +302,7 @@
           <p><b>Tag: </b> <i>span</i></p>
           <p><b>Note: </b> <em>Spans are containers like div but they are inline element while divs are block level element!</em></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;p>This is a &lt;span>Span&lt;/span> inside a p tag&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;p>This is a &lt;span>Span&lt;/span> inside a p tag&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>This is a <span>Span</span> inside a p tag</p>
@@ -339,7 +343,7 @@
            </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;table>
+          <pre class="line-numbers"><code class="language-html">&lt;table>
   &lt;tr>
     &lt;th>Id.&lt;/th>
     &lt;th>Name&lt;/th>
@@ -378,7 +382,7 @@
           </div>
           <br>
           <p><b><small>Example for <kbd>border=""</kbd></small></b></p>
-          <pre><code>&lt;table border="1">
+          <pre class="line-numbers"><code class="language-html">&lt;table border="1">
 ......
 &lt;/tabe></code></pre>
           <p><b><small>Output</small></b></p>
@@ -403,7 +407,7 @@
           </div>
           <br>
           <p><b><small>Example for <kbd>cellspacing=""</kbd></small></b></p>
-          <pre><code>&lt;table border="1" cellspacing="0">
+          <pre class="line-numbers"><code class="language-html">&lt;table border="1" cellspacing="0">
 ......
 &lt;/tabe></code></pre>
           <p><b><small>Output</small></b></p>
@@ -428,7 +432,7 @@
           </div>
           <br>
           <p><b><small>Example for <kbd>cellpadding=""</kbd></small></b></p>
-          <pre><code>&lt;table border="1" cellpadding="15">
+          <pre class="line-numbers"><code class="language-html">&lt;table border="1" cellpadding="15">
 ......
 &lt;/tabe></code></pre>
           <p><b><small>Output</small></b></p>
@@ -468,11 +472,11 @@
                <li><code>color</code> <code>background</code></li>  
           </p>
           <p><b><small>Structure</small></b></p>
-          <pre><code>selector{
+          <pre class="line-numbers"><code class="language-html">selector{
   property: value;
 }</code></pre>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;style>
+          <pre class="line-numbers"><code class="language-html">&lt;style>
   div{
     width: 100px;
     height: 100px;
@@ -516,11 +520,13 @@
           <p><b>Tag: </b> <i>&lt;!-- --&gt;</i></p>
           <p><b>Note: </b> <em>Comments doesn’t show up on website!</em></p>
           <p><b><small>Example</small></b></p>
-          <pre><code>&lt;!-- This is a comment --&gt;</code></pre>
+          <pre class="line-numbers"><code class="language-html">&lt;!-- This is a comment --&gt;</code></pre>
         </div>
       </div>
       
     </div>
   </main>
+  
+  <script src="prism.js"></script>
 </body>
 </html>
