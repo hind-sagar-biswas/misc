@@ -33,6 +33,25 @@ pre{
   overflow: auto;
 }
 
+pre, code{
+  outline: none;
+}
+
+iframe{
+  background: #fff;
+  border-radius: 6px;
+  border: 2px solid #4a5594;
+  width: 100%;
+}
+
+button{
+  background: #4a5594;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #4a5594;
+  border-radius: 5px;
+}
+
 ul li {
   list-style-type: none;
   margin: 4px 10px;
@@ -109,3 +128,29 @@ li code, kbd{
 .content ul a{
   color: #8099c1;
 }
+
+#toolbar{
+  display: flex;
+  /* justify-content: space-between; */
+}
+.tool-set button {
+  color: #4a5594;
+  background: #f9f9f9;
+  padding: 2px 10px;
+  margin: 3px 1px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 0.9em;
+  box-shadow:1px 1px 0 0 #242b49;
+}
+.tool-set button:hover {
+  background: #4a5594;
+  color: #f9f9f9;
+}
+.tool-set button:active {
+  background: #4a5594;
+  color: #f9f9f9;
+  box-shadow: 0 0 0 0 #242b49;
+}
+
+/*  #editor-cont{	width: 100vw;	height: 100vh;	position: fixed;	top: 0;	left: 0;	background: rgba( 225, 225, 225, 0.3 );	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );	backdrop-filter: blur( 4px );	-webkit-backdrop-filter: blur( 4px );	display: flex;	align-items: center;	justify-content: center;	transition: 0.3s;}/*  */

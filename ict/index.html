@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+
     <meta name="format-detection" content="telephone=yes" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,10 +14,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="prism.css">
 </head>
 <body>
-  <main>
+  <style>
+a[href='#top']{
+ position: fixed;
+ right: 18px;
+ bottom: 10px;
+ z-index: 10000;
+}
+#to-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+#to-top:hover{
+  opacity: 0.8;
+}
+#to-top:active{
+  opacity: 1;
+}
+  </style>
+  <a href="#top"><button id="to-top"><i class="fas fa-angle-up" style="color:inherit;"></i></button></a>
+  <main id="top">
     <div class="sub-cont">
       <div id="header">
         <a href="https://facebook.com/hindsagar.biswas"><img width="60px" src="https://avatars.githubusercontent.com/u/69765092?v=4" alt="Hind"></a>
@@ -28,7 +53,11 @@
       </div>
       
       <div class="element">
-        <h3 class="element-name">Table of Contents</h3>
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+          <h3 class="element-name">Table of Contents</h3>
+          <a href="#edit"><button style="padding: 5px 18px;">&lt;html/> Editor</button></a>
+        </div>
+        
         <div class="info content">
           <ul>
             <a href="#struct"><li>Base Structure </li></a>
@@ -73,10 +102,14 @@
         <div class="info">
           <p><b>Tag: </b> <i>p</i></p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;p>This is a paragraph&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html" id="p-code">&lt;p>This is a paragraph&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>This is a paragraph</p>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('p-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -86,7 +119,7 @@
         <div class="info">
           <p><b>Tag: </b> <i>h1, h2, h3, h4, h5, h6</i></p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;h1> This is Heading 1 &lt;/h1>
+          <pre class="line-numbers"><code class="language-html" id="h-code">&lt;h1> This is Heading 1 &lt;/h1>
 &lt;h2> This is Heading 2 &lt;/h2>
 &lt;h3> This is Heading 3 &lt;/h3>
 &lt;h4> This is Heading 4 &lt;/h4>
@@ -101,6 +134,10 @@
             <h5> This is Heading 5 </h5>
             <h6> This is Heading 6 </h6>
           </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('h-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
+          </div>
         </div>
       </div>
       
@@ -109,10 +146,14 @@
         <div class="info">
           <p><b>Tag: </b> <i>br</i></p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;p>Before break&lt;br>This is after break&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html" id="br-code">&lt;p>Before break&lt;br>This is after break&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>Before break<br>This is after break</p>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('br-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -122,10 +163,14 @@
         <div class="info">
           <p><b>Tag: </b> <i>hr</i></p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;p>Before horizontal break&lt;hr>After horizontal break&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html" id="hr-code">&lt;p>Before horizontal break&lt;hr>After horizontal break&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>Before horizontal break<hr>After horizontal break</p>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('hr-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -144,7 +189,7 @@
            </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;p> This is &lt;b>Bold text&lt/b>&lt;/p>
+          <pre class="line-numbers"><code class="language-html" id="text-code">&lt;p> This is &lt;b>Bold text&lt/b>&lt;/p>
 &lt;p> This is &lt;strong>Bold text&lt/strong>&lt;/p>
 &lt;p> This is &lt;i>Itallic text&lt/i>&lt;/p>
 &lt;p> This is &lt;em>Itallic text&lt/em>&lt;/p>
@@ -162,6 +207,10 @@
 <p> This is <del>Line through text</del></p>
 <p> This is <sub>Subscript</sub></p>
 <p> This is <sup>Superscript</sup></p>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('text-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -192,7 +241,7 @@
            </ul>
           </p>
           <p><b><small>Example [ordered list]</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;ol>This is an Ordered list
+          <pre class="line-numbers"><code class="language-html" id="ol-code">&lt;ol>This is an Ordered list
   &lt;li>Item 1&lt;/li>
   &lt;li>Item 2&lt;/li>
   &lt;li>Item 3&lt;/li>
@@ -205,8 +254,12 @@
               <li>Item 3</li>
             </ol>
           </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('ol-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
+          </div>
         <p><b><small>Example [unordered list]</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;ul>This is an Unordered list
+          <pre class="line-numbers"><code class="language-html" id="ul-code">&lt;ul>This is an Unordered list
   &lt;li>Item 1&lt;/li>
   &lt;li>Item 2&lt;/li>
   &lt;li>Item 3&lt;/li>
@@ -218,6 +271,10 @@
               <li>Item 2</li>
               <li>Item 3</li>
             </ul>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('ul-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -233,10 +290,14 @@
              </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;a href="https://google.com/">Click Here&lt;/a></code></pre>
+          <pre class="line-numbers"><code class="language-html" id="a-code">&lt;a href="https://google.com/">Click Here&lt;/a></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <a href="https://google.com/">Click Here</a>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('a-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -245,7 +306,7 @@
         <h3 class="element-name">Meta</h3>
         <div class="info">
           <p><b>Tag: </b> <i>meta</i></p>
-          <p><b>Note: </b> <em>Meta tag doesn’t show up on website, it only contains informations related to the website inside head tag!</em></p>
+          <p><b>Note: </b> <em>Meta tag doesn’t show up on website, it only contains informations related to the website inside head tag! <i>Meta tag contains informations and instructions about webpage.</i></em></p>
           <p><b>Attributes: </b>
              <ul>
                <li><code>charset=""</code> : utf-8</li>
@@ -270,10 +331,14 @@
              </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;img src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" width="200px" alt="Site Logo"></code></pre>
+          <pre class="line-numbers"><code class="language-html" id="img-code">&lt;img src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" width="200px" alt="Site Logo"></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <img width="200px" src="https://i.pinimg.com/originals/a5/5c/07/a55c077d992aeab224bb9bfd9d0b44bf.png" alt="Lemmings">
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('img-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -284,7 +349,7 @@
           <p><b>Tag: </b> <i>div</i></p>
           <p><b>Note: </b> <em>Divs are just containers that contains a block of codes!</em></p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;div>
+          <pre class="line-numbers"><code class="language-html" id="div-code">&lt;div>
   &lt;p>This is a paragraph inside a div&lt;/p>
 &lt;/div></code></pre>
           <p><b><small>Output</small></b></p>
@@ -292,6 +357,10 @@
             <div>
               <p>This is a paragraph inside a div</p>
             </div>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('div-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -302,10 +371,14 @@
           <p><b>Tag: </b> <i>span</i></p>
           <p><b>Note: </b> <em>Spans are containers like div but they are inline element while divs are block level element!</em></p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;p>This is a &lt;span>Span&lt;/span> inside a p tag&lt;/p></code></pre>
+          <pre class="line-numbers"><code class="language-html" id="span-code">&lt;p>This is a &lt;span>Span&lt;/span> inside a p tag&lt;/p></code></pre>
           <p><b><small>Output</small></b></p>
           <div class="output">
             <p>This is a <span>Span</span> inside a p tag</p>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('span-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
         </div>
       </div>
@@ -343,7 +416,7 @@
            </ul>
           </p>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;table>
+          <pre class="line-numbers"><code class="language-html" id="table-code">&lt;table>
   &lt;tr>
     &lt;th>Id.&lt;/th>
     &lt;th>Name&lt;/th>
@@ -379,6 +452,10 @@
     <td>Poland</td>
   </tr>
 </table>
+          </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('table-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
           </div>
           <br>
           <p><b><small>Example for <kbd>border=""</kbd></small></b></p>
@@ -476,7 +553,7 @@
   property: value;
 }</code></pre>
           <p><b><small>Example</small></b></p>
-          <pre class="line-numbers"><code class="language-html">&lt;style>
+          <pre class="line-numbers"><code class="language-html" id="st-code">&lt;style>
   div{
     width: 100px;
     height: 100px;
@@ -511,6 +588,10 @@
             </style>
             <div id="output-div-1">This is a div</div>
           </div>
+          <br>
+          <div align="right">
+            <button onclick="tryIt('st-code')">Try It <i class="fas fa-angle-right" style="color:inherit;"></i></button>
+          </div>
         </div>
       </div>
       
@@ -523,10 +604,53 @@
           <pre class="line-numbers"><code class="language-html">&lt;!-- This is a comment --&gt;</code></pre>
         </div>
       </div>
+     
+    <div id="editor-cont">
+      <div class="element" id="edit">
+        <h3 class="element-name">Code Editor</h3>
+        <div class="info">
+          <p><b><small>Your Code</small></b></p>
+          <pre style="background: white;"><code class="language-html">&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;title>Page title&lt;/title>
+&lt;/head>
+&lt;body></code></pre>
+          <pre><code class="language-html" id="editor" contenteditable>&lt;h2>Hello World!&lt;/h2>
+&lt;p>This is a sample code&lt;/p></code></pre>
+          <div id="toolbar">
+            <div class="tool-set">
+              <button id="tool-p">&lt;p&gt;</button>
+              <button id="tool-div">&lt;div&gt;</button>
+              <button id="tool-a">&lt;a&gt;</button>
+              <button id="tool-img">&lt;img&gt;</button>
+              <button id="tool-ul">&lt;ul&gt;</button>
+              <button id="tool-ol">&lt;ol&gt;</button>
+              <button id="tool-li">&lt;li&gt;</button>
+              
+              <button id="tool-lt">&lt;</button>
+              <button id="tool-gt">&gt;</button>
+              <button id="tool-elt">&lt;/</button>
+              <button id="tool-atr">=" "</button>
+              <button id="tool-class">[class]</button>
+              <button id="tool-style">[style]</button>
+              <button id="tool-com">&lt;!-- --&gt;</button>
+            </div>
+          </div>
+          <pre style="background: white;"><code class="language-html">&lt;/body>
+&lt;/html></code></pre>
+          <button id="run"><i style="color:#fff" class="far fa-play-circle"></i>&nbsp; Run</button>
+          <p><b><small>Output</small></b></p>
+          <iframe id="frame"></iframe>
+        </div>
+      </div>
+    </div>
       
     </div>
   </main>
   
+  <script src="editor.js"></script>
   <script src="prism.js"></script>
 </body>
 </html>
