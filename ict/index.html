@@ -625,11 +625,14 @@ a[href='#top']{
 &lt;html>
 &lt;head>
   &lt;meta charset="UTF-8">
-  &lt;title>Page title&lt;/title>
+  &lt;title>Page Title&lt;/title>
 &lt;/head>
 &lt;body></code></pre>
-          <pre><code class="language-html" id="editor" contenteditable>&lt;h2>Hello World!&lt;/h2>
-&lt;p>This is a sample code&lt;/p></code></pre>
+      
+          <pre id="editor-pre"><code class="language-html" id="editor" contenteditable>
+
+</code></pre>
+
           <div id="toolbar">
             <div class="tool-set">
               <button id="tool-p">&lt;p&gt;</button>
@@ -653,7 +656,26 @@ a[href='#top']{
 &lt;/html></code></pre>
           <button id="run"><i style="color:#fff" class="far fa-play-circle"></i>&nbsp; Run</button>
           <p><b><small>Output</small></b></p>
-          <iframe id="frame"></iframe>
+          <div id="window">
+            <div style="display: flex; align-items: center; background: rgba(0,0,0,0.35); width: calc(100% + 4px); border-radius: 5px 5px 0 0;">
+              <div id="page-title" style="display: flex; justify-content: space-between; align-items: center;">
+                Page Title 
+                <i class="fas fa-times-circle" style="color: inherit;"></i>
+              </div>
+              <div style="opacity: 0.3; padding: 5px; 10px">
+                <i class="fas fa-plus-circle" style="color: inherit;"></i>
+              </div>
+            </div>
+            <div id="url-cont">
+              <div id="url">
+                <p>
+                  <i class="fas fa-lock" style="color:inherit;"></i>&nbsp;&nbsp;
+                   https://hind-sagar-biswas.github.io/misc/ict/#edit
+                </p>
+              </div>
+            </div>
+            <iframe id="frame"></iframe>
+          </div>
         </div>
       </div>
     </div>

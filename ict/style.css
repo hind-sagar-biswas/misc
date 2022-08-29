@@ -40,7 +40,9 @@ pre, code{
 iframe{
   background: #fff;
   border-radius: 6px;
+  border-radius: 0 0 5px 5px;
   border: 2px solid #4a5594;
+  border: 2px solid grey;
   width: 100%;
 }
 
@@ -154,3 +156,36 @@ li code, kbd{
 }
 
 /*  #editor-cont{	width: 100vw;	height: 100vh;	position: fixed;	top: 0;	left: 0;	background: rgba( 225, 225, 225, 0.3 );	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );	backdrop-filter: blur( 4px );	-webkit-backdrop-filter: blur( 4px );	display: flex;	align-items: center;	justify-content: center;	transition: 0.3s;}/*  */
+
+#page-title, #url-cont{
+  background: #4a5594;
+  background: grey;
+  color: #cbecf6;
+  color: #f6f6f6;
+}
+
+#page-title{
+  border-radius: 5px 10px 0 0;
+  width: 100px;
+  padding: 5px 10px;
+}
+
+#url-cont{
+  width: calc(100% + 4px);
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85em;
+}
+
+#url{
+  width: calc(100% - 14px);
+  border-radius: 20px;
+  padding: 2px 12px;
+  margin: 0 7px;
+  background: rgba(225, 225, 225, 0.35);
+  overflow: auto;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}

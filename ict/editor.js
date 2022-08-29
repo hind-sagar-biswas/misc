@@ -3,8 +3,11 @@ scriptTag.src = `prism.js`;
 var head = document.getElementsByTagName('head')[0];
 head.appendChild(scriptTag);
 
+var setRange = 0;
 
+const editorPre = document.querySelector("#editor-pre");
 const editor = document.querySelector("#editor");
+const toolbar = document.querySelector("#toolbar");
 const iframe = document.querySelector("#frame");
 const btn = document.querySelector("#run");
 
@@ -40,11 +43,9 @@ const eltContent = `</`;
 const atrContent = `=""`;
 const clContent = `class=""`;
 const stContent = `style=""`;
-const commentContent = `<!--  -->`;
+const commentContent = `<!-- -->`;
 
-
-//editor.textContent = `<h2>Hello World!</h2>
-//<p>This is a sample code</p>`;
+editor.content = "Write your code here";
 //iframe.src = "data:text/html;charset=utf-8," + encodeURI(editor.textContent);
 
 
@@ -57,6 +58,7 @@ function reloadJS() {
 }
 
 function setEndOfContenteditable(contentEditableElement) { 
+  
   var range,selection;
   if(document.createRange) { 
     range = document.createRange();
@@ -87,19 +89,38 @@ function getParentId(num) {
 }
 
 function insertTextAtCaret(text) { 
+  
+  toolbar.style.pointerEvents = 'none';
+  toolbar.style.opacity = 0.5;
+  
   var sel, range;
+  
   if (window.getSelection) {
     sel = window.getSelection(); 
     if (sel.getRangeAt && sel.rangeCount) { 
       if (getParentId(1) == "editor" || getParentId(2) == "editor" || getParentId(3) == "editor") {
         range = sel.getRangeAt(0); 
         range.deleteContents(); 
-        range.insertNode( document.createTextNode(text) ); 
+        range.insertNode( document.createTextNode(text) );
       }
     }
   } else if (document.selection && document.selection.createRange) { 
     document.selection.createRange().text = text; 
   }
+  
+  var newRange = document.createRange();
+  try {
+    setRange = range.endOffset;
+  } catch (err) {
+    
+  }
+  
+  newRange.setStart(editor, setRange);
+  newRange.setEnd(editor, setRange);
+  newRange.collapse(true);
+  sel.removeAllRanges();
+  sel.addRange(newRange);
+  
 }
 
 function tryIt(id) {
@@ -117,12 +138,24 @@ btn.addEventListener("click", () => {
   reloadJS();
 });
 
+editorPre.addEventListener("click", () => {
+  editor.click();
+  editor.focus();
+});
 
-/*editor.addEventListener('keyup',()=>{
-  var html = editor.textContent;
-  iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-  reloadJS();
-})*/
+editor.addEventListener('focus',()=>{
+  toolbar.style.display = 'block';
+})
+
+editor.addEventListener('keyup',()=>{
+  toolbar.style.pointerEvents = 'all';
+  toolbar.style.opacity = 1;
+})
+
+editor.addEventListener('click',()=>{
+  toolbar.style.pointerEvents = 'all';
+  toolbar.style.opacity = 1;
+})
 
 editor.addEventListener("paste", function(e) {
         e.preventDefault();
@@ -175,3 +208,4 @@ comment.addEventListener("click", ()=>{
   insertTextAtCaret(commentContent)
 });
 
+toolbar.style.display = 'none';
