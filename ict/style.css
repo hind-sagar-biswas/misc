@@ -3,10 +3,19 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: "Quicksand";
   background: #cfcfcf;
   padding: 10px;
+}
+
+main{
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 a{
@@ -188,4 +197,26 @@ li code, kbd{
   overflow: auto;
   white-space:nowrap;
   text-overflow:ellipsis;
+}
+
+a[href='#top']{
+ position: fixed;
+ right: 18px;
+ bottom: 10px;
+ z-index: 10000;
+}
+#to-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+#to-top:hover{
+  opacity: 0.8;
+}
+#to-top:active{
+  opacity: 1;
 }

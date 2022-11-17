@@ -46,7 +46,7 @@ const stContent = `style=""`;
 const commentContent = `<!-- -->`;
 
 editor.content = "Write your code here";
-//iframe.src = "data:text/html;charset=utf-8," + encodeURI(editor.textContent);
+iframe.src = "data:text/html;charset=utf-8," + encodeURI(editor.textContent);
 
 
 function reloadJS() { 
