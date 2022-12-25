@@ -1,123 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Routine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
+
 <body>
     <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+             font-family: 'Ubuntu Mono', monospace;
+             color: #333333;
+        }
+
         .tg {
             border-collapse: collapse;
             border-spacing: 0;
+            border-color: #333333;
+            border-top-color: #444444;
+            border-left-color: #444444;
+            margin: auto;
         }
-    
-        .tg td {
-            border-color: black;
-            border-style: solid;
-            border-width: 1px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            overflow: hidden;
-            padding: 10px 5px;
-            word-break: normal;
-        }
-    
-        .tg th {
-            border-color: black;
-            border-style: solid;
-            border-width: 1px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            overflow: hidden;
-            padding: 10px 5px;
-            word-break: normal;
-        }
-    
-        .tg .tg-c3ow {
-            border-color: inherit;
-            text-align: center;
-            vertical-align: top
-        }
-    
-        .tg .tg-7btt {
-            border-color: inherit;
+
+        th {
+            color: white;
             font-weight: bold;
-            text-align: center;
-            vertical-align: top
+            background-color: #444444;
         }
-    
-        .tg .tg-rvyq {
-            border-color: inherit;
-            font-style: italic;
+
+        th,
+        td {
+            border-color: #333333;
+            padding: 15px 20px;
+            border: 3px solid #333333;
+        }
+        
+        .tg-rvyq {
+            color: white;
             font-weight: bold;
-            text-align: center;
-            vertical-align: top
+            background-color: #333333;
+            border: 3px solid #444444;
+        }
+        
+        .tg-7btt{
+            background-color: #444444;
+            border-color: #444444;
         }
     </style>
-    <table class="tg">
-        <thead>
-            <tr>
-                <th class="tg-7btt">DAY / TIME (h)</th>
-                <th class="tg-rvyq">1800</th>
-                <th class="tg-rvyq">1900</th>
-                <th class="tg-rvyq">2000</th>
-                <th class="tg-rvyq">2030</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tg-rvyq">SATURDAY</td>
-                <td class="tg-c3ow">Higher Math</td>
-                <td class="tg-c3ow">Physics</td>
-                <td class="tg-c3ow">Bangla</td>
-                <td class="tg-c3ow">Chemistry</td>
-            </tr>
-            <tr>
-                <td class="tg-rvyq">SUNDAY</td>
-                <td class="tg-c3ow">Biology</td>
-                <td class="tg-c3ow">Chemistry</td>
-                <td class="tg-c3ow">Bangla</td>
-                <td class="tg-c3ow">Higher Math</td>
-            </tr>
-            <tr>
-                <td class="tg-rvyq">MONDAY</td>
-                <td class="tg-c3ow">Physics</td>
-                <td class="tg-c3ow">Higher Math</td>
-                <td class="tg-c3ow">Bangla</td>
-                <td class="tg-c3ow">Chemistry</td>
-            </tr>
-            <tr>
-                <td class="tg-rvyq">TUESDAY</td>
-                <td class="tg-c3ow">Chemistry</td>
-                <td class="tg-c3ow">Biology</td>
-                <td class="tg-c3ow">Bangla</td>
-                <td class="tg-c3ow">Physics</td>
-            </tr>
-            <tr>
-                <td class="tg-rvyq">WEDNESDAY</td>
-                <td class="tg-c3ow">Biology</td>
-                <td class="tg-c3ow">Physics</td>
-                <td class="tg-c3ow">Bangla</td>
-                <td class="tg-c3ow">Higher Math</td>
-            </tr>
-            <tr>
-                <td class="tg-rvyq">THURSDAY</td>
-                <td class="tg-c3ow">Biology</td>
-                <td class="tg-c3ow">Chemistry</td>
-                <td class="tg-c3ow">Bangla</td>
-                <td class="tg-c3ow">Physics</td>
-            </tr>
-            <tr>
-                <td class="tg-rvyq">FRIDAY</td>
-                <td class="tg-c3ow">Chemistry</td>
-                <td class="tg-c3ow">Higher Math</td>
-                <td class="tg-c3ow">Biology</td>
-                <td class="tg-c3ow">Physics</td>
-            </tr>
-        </tbody>
-    </table>
+    <main>
+        <center>
+            <h1><i class="fas fa-calendar-alt"></i> STUDY PLAN</h1>
+        </center>
+        <table class="tg" border="2px">
+            <thead>
+                <tr>
+                    <th class="tg-7btt"><i class="fas fa-arrow-down"></i> DAY / TIME (h) <i class="fas fa-arrow-right"></i></th>
+                    <th class="tg-rvyq"><i class="fas fa-clock"></i> 1800</th>
+                    <th class="tg-rvyq"><i class="fas fa-clock"></i> 1900</th>
+                    <th class="tg-rvyq"><i class="fas fa-clock"></i> 2000</th>
+                    <th class="tg-rvyq"><i class="fas fa-clock"></i> 2030</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-rvyq"><i class="fas fa-calendar-day"></i> SATURDAY</td>
+                    <td class="tg-c3ow">Higher Math</td>
+                    <td class="tg-c3ow">Physics</td>
+                    <td class="tg-c3ow">Bangla</td>
+                    <td class="tg-c3ow">Chemistry</td>
+                </tr>
+                <tr>
+                    <td class="tg-rvyq"><i class="fas fa-calendar-day"></i> SUNDAY</td>
+                    <td class="tg-c3ow">Biology</td>
+                    <td class="tg-c3ow">Chemistry</td>
+                    <td class="tg-c3ow">Bangla</td>
+                    <td class="tg-c3ow">Higher Math</td>
+                </tr>
+                <tr>
+                    <td class="tg-rvyq"><i class="fas fa-calendar-day"></i> MONDAY</td>
+                    <td class="tg-c3ow">Physics</td>
+                    <td class="tg-c3ow">Higher Math</td>
+                    <td class="tg-c3ow">Bangla</td>
+                    <td class="tg-c3ow">Chemistry</td>
+                </tr>
+                <tr>
+                    <td class="tg-rvyq"><i class="fas fa-calendar-day"></i> TUESDAY</td>
+                    <td class="tg-c3ow">Chemistry</td>
+                    <td class="tg-c3ow">Biology</td>
+                    <td class="tg-c3ow">Bangla</td>
+                    <td class="tg-c3ow">Physics</td>
+                </tr>
+                <tr>
+                    <td class="tg-rvyq"><i class="fas fa-calendar-day"></i> WEDNESDAY</td>
+                    <td class="tg-c3ow">Biology</td>
+                    <td class="tg-c3ow">Physics</td>
+                    <td class="tg-c3ow">Bangla</td>
+                    <td class="tg-c3ow">Higher Math</td>
+                </tr>
+                <tr>
+                    <td class="tg-rvyq"><i class="fas fa-calendar-day"></i> THURSDAY</td>
+                    <td class="tg-c3ow">Biology</td>
+                    <td class="tg-c3ow">Chemistry</td>
+                    <td class="tg-c3ow">Bangla</td>
+                    <td class="tg-c3ow">Physics</td>
+                </tr>
+                <tr>
+                    <td class="tg-rvyq"><i class="fas fa-calendar-day"></i> FRIDAY</td>
+                    <td class="tg-c3ow">Chemistry</td>
+                    <td class="tg-c3ow">Higher Math</td>
+                    <td class="tg-c3ow">Biology</td>
+                    <td class="tg-c3ow">Physics</td>
+                </tr>
+            </tbody>
+        </table>
+        <center>
+            <p><i class="fas fa-lemon"></i> Study plan for (6:00 to 9:30) PM with Duration of 3.5 hours.</p>
+        </center>
+    </main>
 </body>
+
 </html>
